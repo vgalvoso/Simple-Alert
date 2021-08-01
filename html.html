@@ -4,11 +4,14 @@
 		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 	<body>
-		<button class="success white" onclick="showAlert('Success!','success')">Success Alert</button>
-		<button class="info white" onclick="showAlert('Info!','info')">Info Alert</button>
-		<button class="warning white" onclick="showAlert('Warning!','warning')">Warning Alert</button>
-		<button class="danger white" onclick="showAlert('Danger!','danger')">Danger Alert</button>
-		<button class="bg-red white" onclick="removeAlerts()">Remove Alert</button>
+		<label for="message"> Input Message: </label>
+		<input type="text" id="message" placeholder="Message" value="Some Message"/>
+		<br>
+		<button class="success white" onclick="showAlert($('#message').val(),'success')">Success Alert</button>
+		<button class="info white" onclick="showAlert($('#message').val(),'info')">Info Alert</button>
+		<button class="warning white" onclick="showAlert($('#message').val(),'warning')">Warning Alert</button>
+		<button class="danger white" onclick="showAlert($('#message').val(),'danger')">Danger Alert</button>
+		<button class="bg-red white" onclick="removeAlerts()">Remove Alerts</button>
 		<script src="jquery.js"></script>
 		<script src="javascript.js"></script>
 	</body>
